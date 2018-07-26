@@ -1,0 +1,36 @@
+<table class="bordered responsive-table">
+  <thead class="grey-text">
+    <tr>
+      <th></th>
+      <th>Producto</th>
+      <th>Precio (USD)</th>
+      <th>Competidor 1</th>
+      <th>Competidor 2</th>
+      <th>Inventario</th>
+      <th>Promoción</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each products}}
+      <tr>
+        <td>
+          <input type="checkbox" id="productSelection{{@index}}" class="filled-in primarycheckbox tableCheckbox">
+          <label for="productSelection{{@index}}"></label>
+        </td>
+
+        <td>{{name}}</td>
+        <td><span class="green white-text priceSpan"> {{price}} </span></td>
+        <td><span class="red white-text priceSpan"> {{competidor1}} </span></td>
+        <td><span class="red-text"> {{competidor2}} </span></td>
+        <td>{{inventory}}</td>
+
+        <td>
+          <input type="checkbox" id="productPromotion{{@index}}" class="filled-in emphasisCheckBox tableCheckbox" checked="checked">
+          <label for="productPromotion{{@index}}"></label>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+
+</table>

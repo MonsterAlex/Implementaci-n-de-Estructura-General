@@ -1,0 +1,43 @@
+.filterCard{
+  padding: 10px 20px 0px !important;
+  .row{
+    margin-bottom: 7px !important;
+  }
+}
+
+.paginationTable span{
+  display: inline-flex;
+}
+.priceSpan{
+  padding: 1px 5px;
+}
+
+#productsTable td, th{
+  text-align: right;
+}
+
+///////////////////////////Diseño Responsivo
+.tableCheckbox +label{
+  padding-left: 20px !important;
+}
+
+.exploreProductsTitle{
+  @media screen and (max-width: 600px){
+    font-size: 1.3rem;
+  }
+}
+
+.showProductsButton{
+  font-size: 1.6rem !important;
+}
+
+.filterButton{
+  width: 50% !important;
+  font-size: 1.6rem !important;
+}
+
+.filterDivider{
+  margin-left: -6%;
+  width: 111%;
+  margin-bottom: 3%;
+}

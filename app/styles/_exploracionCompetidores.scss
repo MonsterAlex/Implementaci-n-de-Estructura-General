@@ -1,0 +1,44 @@
+.competidorTitle{
+  margin: 0px;
+}
+.competidorKPI{
+  font-size: 60px;
+  font-weight: bold;
+}
+.competidorKPIIcon{
+  font-size: 50px !important:
+  font-weight: bold !important;
+}
+.competidorKPIContainer, .competidoriInfoContainer{
+  margin: 0px;
+}
+.competidorCard{
+  padding: 0px;
+  ////Media para el diseño Responsivo
+  @media screen and (max-width: 600px){
+    width: 300px !important;
+  }
+}
+
+.competidorAddIcon{
+  font-size: 70px !important;
+  margin-top: 31%;
+  margin-bottom: 31%;
+}
+.competidorAddContainer{
+  border-style: dashed;
+  border-color: grey;
+}
+.competidorRow{
+  margin-bottom: 10px !important;
+  margin-top: 10px !important;
+  ////Media para el diseño Responsivo
+  @media screen and (max-width: 600px){
+    overflow-x: scroll;
+    height: 167px;
+    overflow-y: hidden;
+  }
+}
+.noBoxShadow{
+  box-shadow: none !important;
+}

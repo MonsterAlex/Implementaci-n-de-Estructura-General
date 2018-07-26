@@ -1,0 +1,5 @@
+Para instalar HandleBars escribimos 
+1.-npm install --save-dev gulp-handlebars gulp-define-module gulp-declare gulp-wrap
+2.-bower install --save handlebars
+3.- npm install
+4.-iniciar servidor gulp serve

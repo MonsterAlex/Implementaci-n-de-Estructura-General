@@ -1,0 +1,74 @@
+// bower:scss
+// endbower
+
+@import 'menu';
+@import 'exploracionProductos';
+@import 'exploracionCompetidores';
+
+.page-footer{
+  padding-left: 20px;
+  padding-top: 10px;
+  line-height: 20px !important;
+  margin-bottom: 0px !important;
+  min-height: 75px !important;
+  height: auto !important;
+}
+
+.page-title{
+  padding-left: 20px;
+  font-size: 24px;
+}
+
+.mainContent{
+  padding-left: 300px;
+  /////Diseño Responsivo
+  @media screen and (max-height: 992px){
+    padding-left: 0px;
+    
+  }
+}
+
+$primary-color: #03a9f4;
+$emphasis-color: #FF5722;
+
+input[type=text]:focus, input[type=number]:focu{
+  border-bottom: 1px solid $primary-color !important;
+  box-shadow: 0 1px 0 0 $primary-color !important;
+  +label{
+    color: $primary-color;
+  }
+}
+
+.primarycheckbox.filled-in:checked + label:after{
+  border: 2px solid $primary-color !important;
+  background-color: $primary-color !important;
+}
+
+.emphasisCheckBox.filled-in:checked + label:after{
+  border: 2px solid $emphasis-color !important;
+  background-color: $emphasis-color !important;
+}
+
+.inputSlider{
+  height: auto !important;
+}
+.filterSliders{
+  .range-label{
+    background-color: $primary-color !important;
+  }
+  .noUi-handle{
+    background-color: $primary-color !important;
+  }
+  .noUi-origin:nth-child(1){
+    background-color: $primary-color !important;
+    height: 3px;
+  }
+  .noUi-origin:nth-child(2){
+    background-color: #bfbfbf !important;
+    height: 3px;
+  }
+}
+
+.dropdown-content li > a, .dropdown-content li > span{
+  color: $primary-color !important;
+}
