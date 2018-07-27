@@ -8,8 +8,8 @@ var menuItems=[
   {"item":"Exportación de Productos","icon":"file_upload"}
 ];
 
-var menuContext={menuItems};
-manu.innerHTML=PriceApp.menu(menuContext);
+var menuContext = { menuItems };
+menu.innerHTML = PriceApp.templates.menuContext;
 
 var stateFilter="medium";
 
@@ -22,30 +22,30 @@ function getStateTitle(state){
   }
 };
 
-function changeState(state){
-  var appContentContext={"state":state,"title":getStateTitle(state)};
-  appContent.innerHTML=PriceApp.content(appContentContext);
+function changeState(state) {
+var appContentContext = { "state": state, "title": getStateTitle(state) };
+appContent.innerHTML = PriceApp.templates.content.appContentContext;
   var statePage=document.querySelector("#"+state);
   $(".menuLinks").removeClass("menuActive");
   $("#"+state+"Link").addClass("menuActive");
-  statePage.innerHTML=PriceApp[state]();
+  statePage.innerHTML=PriceApp.templates[state]();
 
   if(state==="exploracionProductos"){
     var sliders=document.querySelectorAll(".sliders");
     sliders.forEach(function(slider){
-      slider.innerHTML=PriceApp.slider();
-      noUiSlider.create(slider.querySelector(".filterSliders"){
-        start:[10,50],
-        conect:true,
-        step:1,
-        range:{
-          'min':0,
-          'max':100
+      slider.innerHTML=PriceApp.templates.slider();
+      noUiSlider.create(slider.querySelector(".filterSliders"), {
+        start: [10, 50],
+        conect: true,
+        step: 1,
+        range: {
+          'min': 0,
+          'max': 100
         },
-        format:wNumb({
-          decimals:0
+        format: wNumb({
+          decimals: 0
         })
-      });
+      })
     });
 
   $('#buscarProducto').autocomplete({
@@ -62,7 +62,7 @@ function changeState(state){
     {"name":"Producto 2","price":156,"competidor1":134,"competidor2":123,"inventory":0},
     {"name":"Producto 1","price":45,"competidor1":45,"competidor2":45,"inventory":12}
   ];
-  tableProductsInfo.innerHTML=PriceApp.tableProducts({products:productsInfo});
+  tableProductsInfo.innerHTML=PriceApp.templates.tableProducts({products:productsInfo});
   changeWidthAndShow();
   }
 };
